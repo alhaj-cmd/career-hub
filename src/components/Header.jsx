@@ -12,7 +12,7 @@ const Header = () => {
        <div className="px-4 py-4 bg-gray-200 mx-auto sm:mx-w-xl md:max-w-full lg:max-w-screen-xl md:px-20 lg:px-8">
          <div className='flex items-center justify-between'>
           <Link to={'/'} className="inline-flex items-center">
-          <span className='ml-2 text-xl font-semibold tracking-wide '>techHero</span>
+          <span className='ml-2 text-2xl font-semibold tracking-wide '>techHero</span>
           </Link>
           {/* nav item section */}
          <ul className='items-center hidden space-x-8 lg:flex'>
