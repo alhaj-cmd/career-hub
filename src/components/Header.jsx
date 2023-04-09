@@ -10,9 +10,9 @@ const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     return (
        <div className="px-4 py-4 bg-gray-200 mx-auto sm:mx-w-xl md:max-w-full lg:max-w-screen-xl md:px-20 lg:px-8">
-         <div className='flex items-center justify-around'>
+         <div className='flex items-center justify-between'>
           <Link to={'/'} className="inline-flex items-center">
-          <span className='ml-2 text-xl font-semibold tracking-wide text-gray-400'>techHero</span>
+          <span className='ml-2 text-xl font-semibold tracking-wide '>techHero</span>
           </Link>
           {/* nav item section */}
          <ul className='items-center hidden space-x-8 lg:flex'>
@@ -24,19 +24,25 @@ const Header = () => {
             </li>
             <li>
                 <NavLink
-                to='/books'
+                to='/statistics'
                 className={({isActive}) =>(isActive ? 'text-gray-400' : 'default')}
-                >Books</NavLink>
+                >Statistics</NavLink>
             </li>
             <li>
                 <NavLink
-                to='/about'
+                to='/job'
                 className={({isActive}) =>(isActive ? 'text-gray-400' : 'default')}
-                >About US</NavLink>
+                >Applied Jobs</NavLink>
+            </li>
+            <li>
+                <NavLink
+                to='/blog'
+                className={({isActive}) =>(isActive ? 'text-gray-400' : 'default')}
+                >Blog</NavLink>
             </li>
 
          </ul>
-         <button className='bg-gradient-to-r from-sky-500 to-indigo-500'>hello</button>
+         <button className='bg-gradient-to-r text-white rounded-lg px-4 py-3 from-sky-500 to-indigo-400'>Star Applying</button>
 
             {/* Mobile Navbar Section */}
         <div className='lg:hidden'>
