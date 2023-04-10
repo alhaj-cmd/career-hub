@@ -9,6 +9,9 @@ import {
 import Header from './components/Header';
 import Home from './components/Home';
 import ErrorPage from './components/ErrorPage';
+import Statistic from './components/Statistic';
+import Applied from './components/Applied';
+import Blogs from './components/Blogs';
 
 const router = createBrowserRouter([
   {
@@ -19,6 +22,18 @@ const router = createBrowserRouter([
       {
         path:'/',
         element:<Home></Home>
+      },
+      {
+        path:'/statistics',
+        element:<Statistic></Statistic>
+      },
+      {
+        path:'/job',
+        element:<Applied></Applied>
+      },
+      {
+        path:'/blog',
+        element:<Blogs></Blogs>
       }
     ]
   },
