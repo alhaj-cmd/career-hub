@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Catagory from './Catagory';
+import { useLoaderData } from 'react-router-dom';
 
 const Home = () => {
     const [datas, setData]  = useState([]);
@@ -8,6 +9,9 @@ const Home = () => {
         .then(res  => res.json())
         .then(data  => setData(data))
     },[])
+
+    const features = useLoaderData([])
+    console.log(features)
     return (
         <div>
             <div className='bg-violet-50 lg:py-6 lg:px-8 sm:px-2 flex flex-col items-center justify-between lg:flex-row'>
@@ -47,6 +51,12 @@ const Home = () => {
                 data={data}
                 ></Catagory>  )
             } 
+          </div>
+
+          <div>
+            {
+                features.map(feature => <li>{feature.name}</li>)
+            }
           </div>
             
         </div>
