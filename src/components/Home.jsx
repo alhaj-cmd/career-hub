@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Catagory from './Catagory';
 import { useLoaderData } from 'react-router-dom';
+import Features from './Features';
 
 const Home = () => {
     const [datas, setData]  = useState([]);
@@ -53,9 +54,12 @@ const Home = () => {
             } 
           </div>
 
-          <div>
+          <div className='flex flex-col px-4 py-4 sm:items-center justify-between lg:flex-row'>
             {
-                features.map(feature => <li>{feature.name}</li>)
+                features.map(feature => <Features
+                key={feature.id}
+                feature ={feature}
+                ></Features>)
             }
           </div>
             
