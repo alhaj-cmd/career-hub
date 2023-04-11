@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Catagory = ({data}) => {
-    console.log(data)
+    // console.log(data)
     const {name, picture, title}=data;
     return (
         <div className='bg-violet-50 rounded-lg w-64 h-64 p-8'>

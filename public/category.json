@@ -1,20 +1,24 @@
 [
     {
+      "id":1,
       "picture":"https://cdn.iconscout.com/icon/free/png-256/calculator-1768-1149212.png?f=avif&w=128",
       "name": "Account & Finance",
       "title": "300 Jobs Available"
     },
     {
+      "id":2,
       "picture": "https://cdn.iconscout.com/icon/free/png-256/lightbulb-1514715-1283126.png?f=avif&w=128",
       "name": "Creative Design",
       "title": "100+ Jobs Available"
     },
     {
+      "id":3,
       "picture": "https://cdn.iconscout.com/icon/free/png-256/podium-91-386536.png?f=avif&w=128",
       "name": "Marketing & Sales",
       "title": "150 Jobs Available"
     },
     {
+      "id":4,
       "picture": "https://cdn.iconscout.com/icon/free/png-256/computer-setting-4740985-3970132.png?f=avif&w=128",
       "name": "Engineering Job",
       "title": "224 Jobs Available"

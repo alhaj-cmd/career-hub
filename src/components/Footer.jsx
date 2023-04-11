@@ -3,17 +3,17 @@ import React from 'react';
 const Footer = () => {
     return (
         <div>
-            <div class=" bg-black text-gray-300 py-6 px-4 w-full flex flex-col justify-between lg:flex-row">
+            <div className=" bg-black text-gray-300 py-6 px-4 w-full flex flex-col justify-between lg:flex-row">
                 <div>
 
-                    <p class=" text-2xl">TechHero</p>
+                    <p className=" text-2xl">TechHero</p>
                     <p>A tech job is one that deals with <br />
                         computer programs, hardware, software, <br /> networking, and maintaining systems</p>
 
                 </div>
                 <div>
 
-                    <p class=" text-2xl">Company</p>
+                    <p className=" text-2xl">Company</p>
                     <p>About Us</p>
                     <p>Work</p>
                     <p>Latest News</p>
@@ -22,7 +22,7 @@ const Footer = () => {
                 </div>
                 <div>
 
-                    <p class=" text-2xl">Product</p>
+                    <p className=" text-2xl">Product</p>
                     <p>Prototype</p>
                     <p>Plans & Pricing</p>
                     <p>Customers</p>
@@ -38,7 +38,7 @@ const Footer = () => {
 
                 </div>
                 <div>
-                    <p class=" text-2xl">contact</p>
+                    <p className=" text-2xl">contact</p>
                     <p>524 Broadway , NYC <br />
                         +1 777 - 978 - 5570</p>
 

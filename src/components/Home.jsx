@@ -7,6 +7,11 @@ const Home = () => {
     const loadFeatures = useLoaderData()
 
     const [datas, setData]  = useState([]);
+    const [showAll, setShowAll] = useState(false);
+
+    const handleShowAll =() =>{
+        setShowAll(true)
+    }
     useEffect(() =>{
        fetch('category.json')
         .then(res  => res.json())
@@ -49,20 +54,25 @@ const Home = () => {
            
           <div className='flex flex-col px-4 py-4 sm:items-center justify-between lg:flex-row'>
           {
-                datas.map((data, idx)  => <Catagory
-               key={data.idx}
+                datas.map((data)  => <Catagory
+               key={data.id}
                 data={data}
                 ></Catagory>  )
             } 
           </div>
 
-          <div className='grid grid-cols-2 gap-4 px-4 py-4 sm:items-center'>
-            {
-                loadFeatures.map(feature => <Features
+          <div >
+           <div className='grid grid-cols-2 gap-4 px-4 py-4 sm:items-center'>
+           {
+                loadFeatures.slice(0, showAll ? 6 : 4).map(feature => <Features
                 key={feature.id}
                 feature ={feature}
                 ></Features>)
             }
+           </div>
+             <p className='flex justify-center' onClick={ handleShowAll }>
+            <button className='bg-gradient-to-r text-white font-bold rounded-lg mt-2 px-4 py-3 from-sky-500 to-indigo-400'>See All Jobs</button>
+            </p>
           </div>
             
         </div>
