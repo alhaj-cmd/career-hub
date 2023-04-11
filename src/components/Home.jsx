@@ -4,6 +4,8 @@ import { useLoaderData } from 'react-router-dom';
 import Features from './Features';
 
 const Home = () => {
+    const loadFeatures = useLoaderData()
+
     const [datas, setData]  = useState([]);
     useEffect(() =>{
        fetch('category.json')
@@ -11,8 +13,8 @@ const Home = () => {
         .then(data  => setData(data))
     },[])
 
-    const features = useLoaderData([])
-    console.log(features)
+    
+    // console.log(features)
     return (
         <div>
             <div className='bg-violet-50 lg:py-6 lg:px-8 sm:px-2 flex flex-col items-center justify-between lg:flex-row'>
@@ -54,9 +56,9 @@ const Home = () => {
             } 
           </div>
 
-          <div className='flex flex-col px-4 py-4 sm:items-center justify-between lg:flex-row'>
+          <div className='grid grid-cols-2 gap-4 px-4 py-4 sm:items-center'>
             {
-                features.map(feature => <Features
+                loadFeatures.map(feature => <Features
                 key={feature.id}
                 feature ={feature}
                 ></Features>)
