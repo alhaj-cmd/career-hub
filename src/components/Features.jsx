@@ -3,7 +3,7 @@ import { MapPinIcon, CurrencyDollarIcon} from '@heroicons/react/24/solid'
 import { Link } from 'react-router-dom';
 
 const Features = ({feature}) => {
-    console.log(feature)
+    // console.log(feature)
     const {name, title, picture, salary, address, length, job}  = feature;
     return (
         <div>

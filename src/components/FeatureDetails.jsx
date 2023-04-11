@@ -1,18 +1,25 @@
-import React from 'react';
-import { useLoaderData, useParams } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import {  useLoaderData, useParams } from 'react-router-dom';
 import Details from './Details';
 
 const FeatureDetails = () => {
-    const loadFeatures = useLoaderData()
-    console.log(loadFeatures);
-    const { id } = useParams();
-    const job = dataDetails.find(job => job.id === parseInt(id));
-    
-   
+    // console.log(loadFeatures);
+    const dynamic = useParams();
+    const [data, setData] = useState({})
+
+    const dataDetail = useLoaderData()
+    useEffect(()=>{
+
+        const jobDetails = dataDetail.find(job => job.id === dynamic.id);
+        console.log(jobDetails)
+        setData(jobDetails)
+    },[])
+   console.log(data)
     return (
         <div>
              <h3 className='text-3xl text-center font-bold py-28 bg-violet-50'>Job Details</h3>
-             <Details job = {job}/>
+              <Details data = {data}></Details>
+              
 
         </div>
     );
