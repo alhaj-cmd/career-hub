@@ -16,7 +16,7 @@ const Features = ({feature}) => {
                         <button className='mr-4 border py-1 px-4 text-violet-600'>{job}</button>
                         <button className='ml-4 border py-1 px-4 text-violet-600'>{length}</button>
                     </div>
-                    <p className='mr-6 flex py-2'> <MapPinIcon className="h-6 w-6" /> {address}<span className='ml-16 inline-flex' ><CurrencyDollarIcon className="h-6 w-6" /> salary: {salary}</span></p>
+                    <p className='mr-6 flex py-2'> <MapPinIcon className="h-6 text-gray-300 w-6" /> {address}<span className='ml-16 inline-flex' ><CurrencyDollarIcon className="h-6 text-gray-300 w-6" /> salary: {salary}</span></p>
                 </div>
                <Link to={`/feature/${feature.id}`}> <button className='bg-gradient-to-r text-white font-bold rounded-lg mt-2 px-4 py-3 from-sky-500 to-indigo-400'>View Details</button></Link>
             </div>

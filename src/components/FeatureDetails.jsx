@@ -15,18 +15,28 @@ const FeatureDetails = () => {
         setData(jobDetails)
     },[])
     
-    const handleAddToCart = (id) =>{
-        console.log(id)
-        const previousFeature = JSON.stringify(localStorage.getItem("title"))
-        console.log(previousFeature);
-        if(previousFeature){
+    // const handleAddToCart = (id) =>{
+    //     console.log(id)
+    //     const previousFeature = JSON.parse(localStorage.getItem("title"))
+    //     console.log(previousFeature);
+    //     if(previousFeature){
 
-        }
-        else{
-            localStorage.setItem("title", idea)
-        }
+    //     }
+    //     else{
+    //         localStorage.setItem("title", JSON.stringify(id))
+    //     }
 
-    }
+    // }
+    const handleAddToCart = (appliedJob) => {
+        const storedJob = localStorage.getItem('appliedJob');
+        if (storedJob) {
+            const appliedJobs = JSON.parse(storedJob);
+            const updatedJobs = [...appliedJobs, appliedJob];
+            localStorage.setItem('appliedJob', JSON.stringify(updatedJobs));
+        } else {
+            localStorage.setItem('appliedJob', JSON.stringify([appliedJob]));
+        }
+    };
 
     return (
         <div>

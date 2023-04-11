@@ -16,12 +16,12 @@ const Details = ({data, handleAddToCart}) => {
           <div className='border bg-violet-50 lg:py-10  px-4'>
             {/* <h2>{address}</h2> */}
             <p  className='font-bold border-b-[3px]'>Job <br /> Details</p>
-            <p className='mr-6 flex py-2'><CurrencyDollarIcon className="h-6 w-6" />  <span  className='font-semibold'>Salary :</span>{salary}</p>
-            <p><span  className='font-semibold mr-6 flex py-2'> <PhoneIcon className="h-6 w-6" />Job Title :</span>{title}</p>
+            <p className='mr-6 flex py-2'><CurrencyDollarIcon className="h-6 text-gray-300 w-6" />  <span  className='font-semibold'>Salary :</span>{salary}</p>
+            <p><span  className='font-semibold mr-6 flex py-2'> <PhoneIcon className="h-6 text-gray-300 w-6" />Job Title :</span>{title}</p>
             <p className='font-bold border-b-[3px]'>Contact <br /> Information</p>
-            <p><span className='font-semibold mr-6 flex py-2'><PhoneIcon className="h-6 w-6" /> Phone :</span>{phone}</p>
-            <p><span className='font-semibold mr-6 flex py-2'> <LinkIcon className="h-6 w-6" />Email: </span>{email}</p>
-            <h2 className='mr-6 flex py-2'><MapPinIcon className="h-6 w-6" /> <span className='font-semibold'>Address :</span>{address}</h2>
+            <p><span className='font-semibold mr-6 flex py-2'><PhoneIcon className="h-6 text-gray-300 w-6" /> Phone :</span>{phone}</p>
+            <p><span className='font-semibold mr-6 flex py-2'> <LinkIcon className="h-6 text-gray-300 w-6" />Email: </span>{email}</p>
+            <h2 className='mr-6 flex py-2'><MapPinIcon className="h-6 text-gray-300 w-6" /> <span className='font-semibold'>Address :</span>{address}</h2>
             
            </div>
            <button onClick={() => handleAddToCart(data)} className='bg-gradient-to-r text-white w-full font-bold rounded-lg mt-2 px-4 py-3 from-sky-500 to-indigo-400'>Apply Now</button>
