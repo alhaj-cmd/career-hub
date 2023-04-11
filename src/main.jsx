@@ -18,29 +18,29 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
-    errorElement:<ErrorPage/>,
-    children:[
+    errorElement: <ErrorPage />,
+    children: [
       {
-        path:'/',
-        element:<Home></Home>,
-        loader:() => fetch('/feature.json')
+        path: '/',
+        element: <Home></Home>,
+        loader: () => fetch('/feature.json')
       },
       {
-        path:'/feature/:id',
-        element:<FeatureDetails></FeatureDetails>,
-        loader:({params}) => fetch('/feature.json')
+        path: '/feature/:id',
+        element: <FeatureDetails></FeatureDetails>,
+        loader: ({ params }) => fetch('/feature.json')
       },
       {
-        path:'/statistics',
-        element:<Statistic></Statistic>
+        path: '/statistics',
+        element: <Statistic></Statistic>
       },
       {
-        path:'/job',
-        element:<Applied></Applied>
+        path: '/job',
+        element: <Applied></Applied>
       },
       {
-        path:'/blog',
-        element:<Blogs></Blogs>
+        path: '/blog',
+        element: <Blogs></Blogs>
       }
     ]
   },
@@ -48,6 +48,6 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <RouterProvider router={router} />
-    // <App />
- 
+  // <App />
+
 )
