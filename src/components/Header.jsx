@@ -43,7 +43,7 @@ const Header = () => {
             </li>
 
          </ul>
-         {/* <button className='bg-gradient-to-r text-white font-bold rounded-lg px-4 py-3 from-sky-500 to-indigo-400'>Star Applying</button> */}
+         <button className='bg-gradient-to-r text-white font-bold rounded-lg px-4 py-3 from-sky-500 to-indigo-400'>Star Applying</button>
 
            {/* Mobile Navbar Section */}
         <div className='lg:hidden'>
@@ -64,7 +64,7 @@ const Header = () => {
                     <Link to='/' className='inline-flex items-center'>
                       <BoltIcon className='h-6 w-6 text-blue-500' />
                       <span className='ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase'>
-                        nextPage
+                       techHero
                       </span>
                     </Link>
                   </div>
@@ -89,18 +89,26 @@ const Header = () => {
                     </li>
                     <li>
                       <Link
-                        to='/books'
+                        to='/statistics'
                         className='font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-blue-400'
                       >
-                        Books
+                        Statistics
                       </Link>
                     </li>
                     <li>
                       <Link
-                        to='/about'
+                        to='/job'
                         className='font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-blue-400'
                       >
-                        About Us
+                        Applied Jobs
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        to='/blog'
+                        className='font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-blue-400'
+                      >
+                       Blog
                       </Link>
                     </li>
                   </ul>

@@ -54,7 +54,7 @@ const data = [
 
 export default function App() {
     return (
-        <div className="lg:py-20 lg:px-20 sm:max-w-full justify-items-center">
+        <div className="lg:py-20 lg:px-20 sm:max-w-full sm:overflow-hidden justify-items-center">
             <AreaChart
                 width={1000}
                 height={400}

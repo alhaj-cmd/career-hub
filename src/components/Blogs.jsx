@@ -15,7 +15,7 @@ const Blogs = () => {
             </div>
             <div className='py-6 px-6'>
                 <div className='m-4'>
-                    <h2 className='text-4xl mb-4'>What is custom Hook React?</h2>
+                    <h2 className='text-4xl mb-4'>What is custom  React Hook?</h2>
                     <p><span className='font-bold border mr-2'>Example: </span>
                         A custom React hook is a function that uses one or more of the built-in React hooks and returns stateful logic that can be reused across multiple components in a React application.
                         instead of writing the same code across multiple components that  the same common stateful logic (a “setState” or localStorage logic), i can put that code inside a custom hook and reuse it.
