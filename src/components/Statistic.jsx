@@ -6,7 +6,8 @@ import {
     XAxis,
     YAxis,
     CartesianGrid,
-    Tooltip
+    Tooltip,
+    ResponsiveContainer
 } from "recharts";
 
 const data = [
@@ -54,8 +55,9 @@ const data = [
 
 export default function App() {
     return (
-        <div className="lg:py-20 lg:px-20 sm:max-w-full sm:overflow-hidden justify-items-center">
-            <AreaChart
+        <div className="lg:py-20 sm:my-12 lg:px-20 sm:max-w-full sm:overflow-hidden justify-items-center">
+          <ResponsiveContainer minHeight={300} minWidth={300} >
+          <AreaChart
                 width={1000}
                 height={400}
                 data={data}
@@ -72,6 +74,7 @@ export default function App() {
                 <Tooltip />
                 <Area type="monotone" dataKey="marks" stroke="#8884d8" fill="#8884d8" />
             </AreaChart>
+          </ResponsiveContainer>
         </div>
     );
 }

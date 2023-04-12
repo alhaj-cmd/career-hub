@@ -37,7 +37,7 @@ const Applied = () => {
 
 
                             <div className="border flex flex-cols-1 py-4 px-4  my-4 mx-6 justify-between overflow-hidden ">
-                                <div className='inline-flex   mx-4'>
+                                <div className='inline-flex sm:flex-row  mx-4'>
                                     <img className='h-30 border rounded-xl w-40' src={appliedJob.picture} alt="" />
                                     <div className='py-4 px-4'>
                                         <h2 className='text-2xl'>{appliedJob.name}</h2>
