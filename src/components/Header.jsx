@@ -83,7 +83,7 @@ const Header = () => {
                 <nav>
                   <ul className='space-y-4'>
                     <li>
-                      <Link to='/' className='default'>
+                      <Link to='/'>
                         Home
                       </Link>
                     </li>
