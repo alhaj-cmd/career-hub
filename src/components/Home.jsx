@@ -52,7 +52,7 @@ const Home = () => {
                     <p>Explore thousands of job opportunities with all the information you need. Its your future</p>
                 </div>
 
-                <div className='flex flex-col px-4 py-4 sm:items-center justify-between lg:flex-row'>
+                <div className='flex flex-col px-4 py-4 items-center justify-between lg:flex-row'>
                     {
                         datas.map((data) => <Catagory
                             key={data.id}
@@ -62,7 +62,7 @@ const Home = () => {
                 </div>
 
                 <div >
-                    <div className='grid grid-cols-2 gap-4 px-4 py-4 sm:items-center'>
+                    <div className='grid lg:grid-cols-2 sm:grid-cols-1 gap-4 px-4 py-4 sm:items-center'>
                         {
                             loadFeatures.slice(0, showAll ? 6 : 4).map(feature => <Features
                                 key={feature.id}

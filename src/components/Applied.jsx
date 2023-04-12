@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const Applied = () => {
 
     const [appliedJobs, setAppliedJobs] = useState([]);
-    // const [filter, setFilter] = useState(null);
+    const [filter, setFilter] = useState(null);
 
     useEffect(() => {
         const storedJob = localStorage.getItem('appliedJob');
@@ -14,11 +14,11 @@ const Applied = () => {
         }
     }, []);
 
-    // const handleFilter = (value) => {
-    //     setFilter(value);
-    // }
+    const handleFilter = (value) => {
+        setFilter(value);
+    }
 
-    // const filteredJobs = appliedJobs.filter(job => !filter || job.remoteOrOnsite === filter);
+    const filteredJobs = appliedJobs.filter(job => !filter || job.job === filter);
 
     // console.log(appliedJobs)
     return (
@@ -26,23 +26,18 @@ const Applied = () => {
             <h3 className='text-3xl text-center font-bold py-28 bg-violet-50'>Applied Jobs</h3>
 
             <div className='lg:py-28 lg:px-20'>
-                {/* <button className='border border-purple-400 rounded text-purple-400 w-20 text-center py-1' onClick={() => handleFilter('Remote')}>
-                    Remote
-                </button> */}
 
-                {/* <button className='border border-purple-400 rounded text-purple-400 w-20 text-center py-1' onClick={() => handleFilter('Onsite')}>
-                    Onsite
-                </button> */}
-
-                <p className='flex justify-end px-6 py-6  '><button className='border flex bg-gray-100 p-2'>Filter By <CheckIcon className="h-6 ml-2  w-6" /></button></p>
+                <div className='flex justify-end px-6 py-6  '>
+                    <button className='border mr-2 flex bg-gray-100 p-2' onClick={() => handleFilter('Onsite')}>Onsite By <CheckIcon className="h-6 ml-2  w-6" /></button>
+                <button className='border flex bg-gray-100 p-2' onClick={() => handleFilter('Remote')}>Remote By <CheckIcon className="h-6 ml-2  w-6"  /></button></div>
                 {
-                    appliedJobs.map((appliedJob, index) =>
+                    filteredJobs.map((appliedJob, index) =>
 
                         <div key={index}>
 
 
-                            <div className="border flex sm:flex-rows-1 py-4 px-4 my-4 mx-6 justify-between overflow-hidden ">
-                                <div className='inline-flex mx-4'>
+                            <div className="border flex flex-cols-1 py-4 px-4  my-4 mx-6 justify-between overflow-hidden ">
+                                <div className='inline-flex   mx-4'>
                                     <img className='h-30 border rounded-xl w-40' src={appliedJob.picture} alt="" />
                                     <div className='py-4 px-4'>
                                         <h2 className='text-2xl'>{appliedJob.name}</h2>
@@ -55,7 +50,7 @@ const Applied = () => {
                                     </div>
                                 </div>
                                 <div className='flex items-center'>
-                                    <Link to="/feature/:id">
+                                    <Link to={`/feature/${appliedJob.id}`}>
                                         <button className='absulate bg-gradient-to-r text-white font-bold rounded-lg py-2 px-4 from-sky-500 to-indigo-400'>View Details</button></Link>
                                 </div>
                             </div>

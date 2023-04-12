@@ -2,8 +2,9 @@ import React, { useEffect, useState } from 'react';
 import {  useLoaderData, useParams } from 'react-router-dom';
 import Details from './Details';
 
+// dynamic data load
+
 const FeatureDetails = () => {
-    // console.log(loadFeatures);
     const dynamic = useParams();
     const [data, setData] = useState({})
 
@@ -15,26 +16,16 @@ const FeatureDetails = () => {
         setData(jobDetails)
     },[])
     
-    // const handleAddToCart = (id) =>{
-    //     console.log(id)
-    //     const previousFeature = JSON.parse(localStorage.getItem("title"))
-    //     console.log(previousFeature);
-    //     if(previousFeature){
+//   localstorage handleaddtocart
 
-    //     }
-    //     else{
-    //         localStorage.setItem("title", JSON.stringify(id))
-    //     }
-
-    // }
-    const handleAddToCart = (appliedJob) => {
+    const handleAddToCart = (id) => {
         const storedJob = localStorage.getItem('appliedJob');
         if (storedJob) {
             const appliedJobs = JSON.parse(storedJob);
-            const updatedJobs = [...appliedJobs, appliedJob];
+            const updatedJobs = [...appliedJobs, id];
             localStorage.setItem('appliedJob', JSON.stringify(updatedJobs));
         } else {
-            localStorage.setItem('appliedJob', JSON.stringify([appliedJob]));
+            localStorage.setItem('appliedJob', JSON.stringify([id]));
         }
     };
 
@@ -43,7 +34,6 @@ const FeatureDetails = () => {
              <h3 className='text-3xl text-center font-bold py-28 bg-violet-50'>Job Details</h3>
               <Details data = {data}
               handleAddToCart={handleAddToCart}
-              
               ></Details>
               
 
